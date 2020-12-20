@@ -10,6 +10,11 @@
       "StackName": "amplify-fss-dev-100744",
       "StackId": "arn:aws:cloudformation:us-east-1:535231303859:stack/amplify-fss-dev-100744/e1b6ce10-42e5-11eb-b2fc-12782188dc93",
       "AmplifyAppId": "dq6c2wbfasrn9"
+    },
+    "categories": {
+      "auth": {
+        "fss486b844a": {}
+      }
     }
   }
 }

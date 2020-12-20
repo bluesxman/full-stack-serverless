@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "fss486b844a": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
