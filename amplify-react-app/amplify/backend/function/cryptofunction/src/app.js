@@ -7,14 +7,13 @@ See the License for the specific language governing permissions and limitations 
 */
 
 
-
-
-var express = require('express')
-var bodyParser = require('body-parser')
-var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
+const express = require('express');
+const bodyParser = require('body-parser');
+const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
+const axios = require('axios');
 
 // declare a new express app
-var app = express()
+const app = express();
 app.use(bodyParser.json())
 app.use(awsServerlessExpressMiddleware.eventContext())
 
@@ -25,13 +24,20 @@ app.use(function(req, res, next) {
   next()
 });
 
-app.get('/coins', function(req, res) {
-  const coins = [
-    { name: 'Bitcoin', symbol: 'BTC', price_usd: '10000' },
-    { name: 'Etherium', symbol: 'ETH', price_usd: '400' },
-    { name: 'Litecoin', symbol: 'LTC', price_usd: '150' },
-  ];
-  res.json({ coins });
+app.get('/coins', async (req, res) => {
+  let apiUrl = `https://api.coinlore.com/api/tickers?start=0&limit=10`;
+
+  if (req.apiGateway && req.apiGateway.event.queryStringParameters) {
+    const { start = 0, limit = 10 } = req.apiGateway.event.queryStringParameters;
+    apiUrl = `https://api.coinlore.com/api/tickers?start=${start}&limit=${limit}`;
+  }
+
+  try {
+    const coinloreResponse = await axios.get(apiUrl);
+    res.json({ coins: coinloreResponse.data.data });
+  } catch (e) {
+    res.json({error: e});
+  }
 });
 
 app.listen(3000, function() {

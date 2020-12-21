@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0716d4e6-bc49-4149-a6d3-f8bab53cbeaf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/amplify/backend/function/cryptofunction/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/function/cryptofunction/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608571934419</updated>
-      <workItem from="1608571935629" duration="1960000" />
+      <workItem from="1608571935629" duration="3181000" />
     </task>
     <servers />
   </component>
