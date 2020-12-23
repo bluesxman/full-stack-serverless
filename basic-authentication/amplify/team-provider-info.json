@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-basicauthentication-dev-81052-authRole",
+      "UnauthRoleArn": "arn:aws:iam::535231303859:role/amplify-basicauthentication-dev-81052-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::535231303859:role/amplify-basicauthentication-dev-81052-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-basicauthentication-dev-81052-deployment",
+      "UnauthRoleName": "amplify-basicauthentication-dev-81052-unauthRole",
+      "StackName": "amplify-basicauthentication-dev-81052",
+      "StackId": "arn:aws:cloudformation:us-east-1:535231303859:stack/amplify-basicauthentication-dev-81052/11291070-4531-11eb-b0db-0a818cac4dad",
+      "AmplifyAppId": "d2m9g7wlnnas0l"
+    },
+    "categories": {
+      "auth": {
+        "basicauthentication2b7787bc": {}
+      }
+    }
+  }
+}
