@@ -1,9 +1,9 @@
-import React, {useEffect} from "react";
+import React, {useEffect} from 'react';
 import {Auth} from 'aws-amplify';
 
-function protectedRoute (Comp, route = '/profile') {
+const protectedRoute = (Comp, route = '/profile') => {
   return (props) => {
-    async function  checkAuthState() {
+    async function checkAuthState() {
       try {
         await Auth.currentAuthenticatedUser();
       } catch (err) {
