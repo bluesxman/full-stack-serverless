@@ -25,6 +25,12 @@ exports.handler = async (event, context, callback) => {
     }
 
     try {
+      try {
+        await cognitoProvider.getGroup(groupParams).promise()
+      } catch (e) {
+        await cognitoProvider.createGroup(groupParams).promise()
+      }
+
       await cognitoProvider.adminAddUserToGroup(userParams).promise()
       callback(null, event)
     } catch (e) {
