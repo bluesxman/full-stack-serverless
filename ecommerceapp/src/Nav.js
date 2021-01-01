@@ -27,7 +27,7 @@ const Nav = (props) => {
           </Link>
         </Menu.Item>
         <Menu.Item key='profile'>
-          <Link to={`/`}>
+          <Link to={`/profile`}>
             <UserOutlined />Profile
           </Link>
         </Menu.Item>
