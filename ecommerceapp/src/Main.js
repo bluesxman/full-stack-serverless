@@ -20,7 +20,7 @@ function Main() {
     console.log('data: ', data)
     if (didCancel) return
     setState({
-      products: data.data.items,
+      products: data.data.Items,
       loading: false
     })
   }
