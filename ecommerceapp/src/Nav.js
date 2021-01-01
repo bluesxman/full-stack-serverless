@@ -32,7 +32,7 @@ const Nav = (props) => {
           </Link>
         </Menu.Item>
         {
-          user.isAuthorize && (
+          user.isAuthorized && (
             <Menu.Item key='admin'>
               <Link to='/admin'>
                 <ProfileOutlined />Admin
